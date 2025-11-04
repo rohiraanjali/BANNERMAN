@@ -49,25 +49,25 @@ export const WhyBannermanSection = (): JSX.Element => {
       />
 
       <ScrollArea className="w-full">
-        <div className="flex items-center gap-10 pb-4">
+        <div className="flex items-center gap-6 sm:gap-8 md:gap-10 pb-4 px-4 md:px-0">
           {features.map((feature, index) => (
             <Card
               key={index}
-              className="flex-shrink-0 w-[416px] bg-transparent border-none"
+              className="flex-shrink-0 w-[280px] sm:w-[350px] md:w-[416px] bg-transparent border-none"
             >
-              <CardContent className="flex flex-col items-center gap-6 p-0">
+              <CardContent className="flex flex-col items-center gap-4 sm:gap-6 p-0">
                 <img
-                  className="w-16 h-16 rounded-2xl"
+                  className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-2xl"
                   alt={feature.title}
                   src={feature.icon}
                 />
 
-                <div className="flex flex-col items-center gap-4 w-full">
-                  <h3 className={`${fonts.text.jakartaBold} text-white text-xl text-center tracking-[0] leading-[28.5px]`}>
+                <div className="flex flex-col items-center gap-3 sm:gap-4 w-full">
+                  <h3 className={`${fonts.text.jakartaBold} text-white text-lg sm:text-xl text-center tracking-[0] leading-6 sm:leading-[28.5px]`}>
                     {feature.title}
                   </h3>
 
-                  <p className={`${fonts.text.interNormal} text-[#a5abb6] text-base text-center tracking-[0] leading-[25.5px] max-w-[333px]`}>
+                  <p className={`${fonts.text.interNormal} text-[#a5abb6] text-sm sm:text-base text-center tracking-[0] leading-6 sm:leading-[25.5px] max-w-[333px]`}>
                     {feature.description}
                   </p>
                 </div>

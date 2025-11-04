@@ -35,8 +35,8 @@ export const MainContentSection = (): JSX.Element => {
       maxWidth="large"
       padding="medium"
     >
-      <div className="flex flex-col items-center gap-12 md:gap-16 lg:gap-[75px]">
-        <h1 className={`${fonts.anton} text-[32px] md:text-[42px] lg:text-[52px] font-normal leading-[40px] md:leading-[50px] lg:leading-[60px] tracking-[0] text-center px-4`}>
+      <div className="flex flex-col items-center gap-8 sm:gap-12 md:gap-16 lg:gap-[75px]">
+        <h1 className={`${fonts.anton} text-[28px] sm:text-[32px] md:text-[42px] lg:text-[52px] font-normal leading-[34px] sm:leading-[40px] md:leading-[50px] lg:leading-[60px] tracking-[0] text-center px-4`}>
           <span className="text-white">
             B2B Influence, Engineered for Scale
           </span>
@@ -47,22 +47,22 @@ export const MainContentSection = (): JSX.Element => {
             {services.map((service, index) => (
               <Card
                 key={index}
-                className={`flex-1 w-full md:w-auto h-auto md:h-[461px] min-h-[400px] md:min-h-[461px] rounded-[20px] overflow-hidden border-none ${
+                className={`flex-1 w-full md:w-auto h-auto md:h-[461px] min-h-[300px] sm:min-h-[350px] md:min-h-[461px] rounded-[20px] overflow-hidden border-none ${
                   service.variant === "filled"
                     ? "bg-[linear-gradient(180deg,rgba(0,255,198,1)_0%,rgba(0,123,95,1)_100%)] border border-solid border-[#00ffc6]"
                     : "bg-black before:content-[''] before:absolute before:inset-0 before:p-px before:rounded-[20px] before:[background:linear-gradient(180deg,rgba(0,255,198,1)_0%,rgba(1,120,93,1)_100%)] before:[-webkit-mask:linear-gradient(#fff_0_0)_content-box,linear-gradient(#fff_0_0)] before:[-webkit-mask-composite:xor] before:[mask-composite:exclude] before:z-[1] before:pointer-events-none"
                 }`}
               >
-                <CardContent className="flex flex-col items-center justify-between h-full p-0 pt-8 md:pt-12 lg:pt-[50px] pb-8 md:pb-12 lg:pb-[50px] px-4 md:px-6">
+                <CardContent className="flex flex-col items-center justify-between h-full p-0 pt-6 sm:pt-8 md:pt-12 lg:pt-[50px] pb-6 sm:pb-8 md:pb-12 lg:pb-[50px] px-4 md:px-6">
                   <div className="flex flex-col items-center gap-4 w-full md:w-[305px] h-full justify-between">
                     <img
-                      className="w-[104px] h-[104px]"
+                      className="w-[80px] h-[80px] sm:w-[90px] sm:h-[90px] md:w-[104px] md:h-[104px]"
                       alt={service.title}
                       src={service.icon}
                     />
-                    <div className="flex flex-col items-center gap-4 flex-1 justify-center">
+                    <div className="flex flex-col items-center gap-3 sm:gap-4 flex-1 justify-center">
                       <h3
-                        className={`${fonts.montserrat} font-bold text-[26px] text-center tracking-[0.64px] leading-[32.4px] ${
+                        className={`${fonts.montserrat} font-bold text-[20px] sm:text-[22px] md:text-[26px] text-center tracking-[0.64px] leading-[26px] sm:leading-[28px] md:leading-[32.4px] ${
                           service.variant === "filled"
                             ? colors.text.black
                             : colors.text.white
@@ -71,7 +71,7 @@ export const MainContentSection = (): JSX.Element => {
                         {service.title}
                       </h3>
                       <p
-                        className={`[font-family:'Open_Sans',Helvetica] font-normal text-[17.5px] text-center tracking-[0.25px] leading-6 ${
+                        className={`[font-family:'Open_Sans',Helvetica] font-normal text-[15px] sm:text-[16px] md:text-[17.5px] text-center tracking-[0.25px] leading-5 sm:leading-6 ${
                           service.variant === "filled"
                             ? colors.text.black
                             : colors.text.white
@@ -86,11 +86,11 @@ export const MainContentSection = (): JSX.Element => {
             ))}
           </div>
 
-          <div className={`w-full ${spacing.container.maxWidth.medium} mx-auto [-webkit-text-stroke:0.5px_#ffffff96] bg-[linear-gradient(178deg,rgba(255,255,255,1)_0%,rgba(255,255,255,0)_100%)] [-webkit-background-clip:text] bg-clip-text [-webkit-text-fill-color:transparent] [text-fill-color:transparent] ${fonts.jakarta} font-normal text-transparent text-[60px] md:text-[80px] lg:text-[120px] tracking-[-2.40px] leading-[60px] md:leading-[80px] lg:leading-[120px] px-4 md:px-6 lg:px-0 mt-8 md:mt-12 lg:mt-0`}>
-            <span className={`${colors.text.black} tracking-[-2.88px] leading-[40px] md:leading-[55px] lg:leading-[70px]`}>
+          <div className={`w-full ${spacing.container.maxWidth.medium} mx-auto [-webkit-text-stroke:0.5px_#ffffff96] bg-[linear-gradient(178deg,rgba(255,255,255,1)_0%,rgba(255,255,255,0)_100%)] [-webkit-background-clip:text] bg-clip-text [-webkit-text-fill-color:transparent] [text-fill-color:transparent] ${fonts.jakarta} font-normal text-transparent text-[32px] sm:text-[40px] md:text-[60px] lg:text-[80px] xl:text-[120px] tracking-[-1px] sm:tracking-[-1.5px] md:tracking-[-2.40px] leading-[36px] sm:leading-[44px] md:leading-[60px] lg:leading-[80px] xl:leading-[120px] px-4 md:px-6 lg:px-0 mt-6 sm:mt-8 md:mt-12 lg:mt-0`}>
+            <span className={`${colors.text.black} tracking-[-1.5px] sm:tracking-[-2px] md:tracking-[-2.88px] leading-[24px] sm:leading-[32px] md:leading-[40px] lg:leading-[55px] xl:leading-[70px]`}>
               &quot;
             </span>
-            <span className={`font-semibold ${colors.text.black} text-[20px] md:text-[30px] lg:text-[40px] tracking-[-0.32px] leading-[28px] md:leading-[42px] lg:leading-[64px]`}>
+            <span className={`font-semibold ${colors.text.black} text-[14px] sm:text-[16px] md:text-[20px] lg:text-[30px] xl:text-[40px] tracking-[-0.2px] sm:tracking-[-0.25px] md:tracking-[-0.32px] leading-[20px] sm:leading-[24px] md:leading-[28px] lg:leading-[42px] xl:leading-[64px]`}>
             Our in-house filmmakers, designers, and writers also helps craft videos, visuals, and thought-leadership content that earns engagement and drives action  🎉
             </span>
           </div>

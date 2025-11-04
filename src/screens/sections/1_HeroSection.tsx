@@ -60,20 +60,20 @@ export const HeroSection = (): JSX.Element => {
 
   return (
     <section className="relative w-full h-screen bg-[#00ffc6] flex flex-col pb-8">
-      <header className="w-full py-5 px-10">
+      <header className="w-full py-4 sm:py-5 px-4 sm:px-6 md:px-10">
         <nav className="max-w-[1470px] mx-auto flex items-center justify-between">
           <img
-            className="h-14 w-auto"
+            className="h-10 sm:h-12 md:h-14 w-auto"
             alt="Bannerman Logo"
             src="/assets/logo.svg"
           />
 
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-2 sm:gap-3 md:gap-4">
             {navButtons.map((button, index) => (
               <Button
                 key={index}
                 variant={button.variant}
-                className={`h-[42px] px-[17px] rounded-[100px] ${button.className}`}
+                className={`h-[36px] sm:h-[38px] md:h-[42px] px-3 sm:px-4 md:px-[17px] rounded-[100px] text-[10px] sm:text-xs ${button.className}`}
               >
                 <span className={fonts.body.xs}>
                   {button.text}
@@ -84,22 +84,22 @@ export const HeroSection = (): JSX.Element => {
         </nav>
       </header>
 
-      <div className="flex-1 flex flex-col items-center justify-center px-4 py-12">
-        <div className="max-w-[1130px] w-full flex flex-col items-center gap-8">
+      <div className="flex-1 flex flex-col items-center justify-center px-4 py-8 sm:py-12">
+        <div className="max-w-[1130px] w-full flex flex-col items-center gap-6 sm:gap-8">
           <img
-            className="w-full max-w-[994px] h-auto"
+            className="w-full max-w-[994px] h-auto px-4 sm:px-0"
             alt="Hero graphic"
             src="/assets/bannerman.svg"
           />
 
-          <div className="w-full max-w-[636px] rounded-lg border-r border-l border-[#151304] py-4 px-6 flex items-center justify-center">
-            <h1 className={`${fonts.heading.hero} text-[#151304] text-center`}>
+          <div className="w-full max-w-[636px] rounded-lg border-r border-l border-[#151304] py-3 sm:py-4 px-4 sm:px-6 flex items-center justify-center">
+            <h1 className={`${fonts.heading.hero} text-[#151304] text-center text-[20px] sm:text-[24px] md:text-[28px] leading-[28px] sm:leading-[32px] md:leading-[37px]`}>
               Your Partner for Influencer-Led B2B Growth
             </h1>
           </div>
 
-          <Button className="h-[71px] px-[30px] bg-black rounded-[40px] hover:bg-black/90">
-            <span className={`${fonts.body.button} text-[#00ffc6]`}>
+          <Button className="h-[56px] sm:h-[64px] md:h-[71px] px-6 sm:px-[24px] md:px-[30px] bg-black rounded-[40px] hover:bg-black/90">
+            <span className={`${fonts.body.button} text-[#00ffc6] text-[16px] sm:text-[20px] md:text-[23px]`}>
               LET'S CHAT
             </span>
           </Button>

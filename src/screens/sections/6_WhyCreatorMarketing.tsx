@@ -377,29 +377,31 @@ export const WhyCreatorMarketingSection = (): JSX.Element => {
         }
       />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-[1200px]">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 w-full max-w-[1200px] px-4 md:px-0">
             {featureCards.map((card, index) => (
               <Card
                 key={index}
-                className="bg-[#1d1c20] border-[#ffffff14] rounded-3xl overflow-hidden min-h-[400px] relative"
+                className="bg-[#1d1c20] border-[#ffffff14] rounded-2xl sm:rounded-3xl overflow-hidden min-h-[350px] sm:min-h-[400px] relative"
               >
-                <CardContent className="p-8 flex flex-col gap-3 relative h-full">
+                <CardContent className="p-6 sm:p-8 flex flex-col gap-3 relative h-full">
                   <div className="flex items-start gap-3 relative z-10">
                     <img
-                      className="w-16 h-16 flex-shrink-0"
+                      className="w-12 h-12 sm:w-16 sm:h-16 flex-shrink-0"
                       alt={card.title}
                       src={card.icon}
                     />
-                    <div className="flex flex-col gap-[15px] flex-1">
-                      <h3 className={`${fonts.text.jakartaSemibold} text-white text-xl tracking-[0] leading-7`}>
+                    <div className="flex flex-col gap-2 sm:gap-[15px] flex-1">
+                      <h3 className={`${fonts.text.jakartaSemibold} text-white text-lg sm:text-xl tracking-[0] leading-6 sm:leading-7`}>
                         {card.title}
                       </h3>
-                      <p className={`${fonts.text.jakartaMedium} text-[#a9a9a9] text-base tracking-[0] leading-[25.5px]`}>
+                      <p className={`${fonts.text.jakartaMedium} text-[#a9a9a9] text-sm sm:text-base tracking-[0] leading-6 sm:leading-[25.5px]`}>
                         {card.description}
                       </p>
                     </div>
                   </div>
-                  {card.mockup}
+                  <div className="hidden md:block">
+                    {card.mockup}
+                  </div>
                 </CardContent>
               </Card>
             ))}

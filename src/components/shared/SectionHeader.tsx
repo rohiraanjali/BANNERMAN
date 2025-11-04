@@ -28,7 +28,7 @@ export const SectionHeader: React.FC<SectionHeaderProps> = ({
       <h2
         className={cn(
           fonts.anton,
-          "font-normal text-[52px] text-center tracking-[0] leading-[62.4px] whitespace-nowrap",
+          "font-normal text-[28px] sm:text-[36px] md:text-[42px] lg:text-[52px] text-center tracking-[0] leading-[34px] sm:leading-[42px] md:leading-[50px] lg:leading-[62.4px]",
           titleClassName
         )}
       >
@@ -40,7 +40,7 @@ export const SectionHeader: React.FC<SectionHeaderProps> = ({
         <div
           className={cn(
             fonts.jakarta,
-            "font-normal text-white text-lg text-center tracking-[0] leading-8 max-w-[938px]",
+            "font-normal text-white text-sm sm:text-base md:text-lg text-center tracking-[0] leading-6 sm:leading-7 md:leading-8 max-w-[938px] px-4",
             descriptionClassName
           )}
         >

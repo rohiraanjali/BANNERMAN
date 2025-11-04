@@ -185,14 +185,14 @@ export const StatsSection = (): JSX.Element => {
         highlight="Stats"
         titleClassName="whitespace-nowrap"
       />
-      <div className="flex flex-col items-center gap-6 w-full">
-        <h2 className={`${fonts.anton} font-normal text-[52px] text-center tracking-[0] leading-[62.4px] whitespace-nowrap`}>
+      <div className="flex flex-col items-center gap-4 sm:gap-6 w-full">
+        <h2 className={`${fonts.anton} font-normal text-[28px] sm:text-[36px] md:text-[42px] lg:text-[52px] text-center tracking-[0] leading-[34px] sm:leading-[42px] md:leading-[50px] lg:leading-[62.4px]`}>
           <span className="text-white"> don&apos;t lie</span>
         </h2>
       </div>
 
-        <div className="flex items-center justify-center gap-[54px] w-full flex-wrap lg:flex-nowrap">
-          <div className="relative w-[545.37px] h-[469.59px] flex-shrink-0">
+        <div className="flex flex-col lg:flex-row items-center justify-center gap-8 sm:gap-12 lg:gap-[54px] w-full px-4 md:px-0">
+          <div className="relative w-full max-w-[545.37px] h-[300px] sm:h-[400px] md:h-[469.59px] flex-shrink-0 hidden md:block">
             {profileCards.map((card, index) => (
               <Card
                 key={index}
@@ -314,23 +314,23 @@ export const StatsSection = (): JSX.Element => {
             ))}
           </div>
 
-          <div className="flex flex-col items-start justify-center gap-[15px] w-full max-w-[622px]">
+          <div className="flex flex-col items-start justify-center gap-4 sm:gap-[15px] w-full max-w-[622px]">
             {statsData.map((stat, index) => (
               <div
                 key={index}
-                className={`relative ${index === 1 || index === 3 ? "ml-auto" : ""} ${index === 0 ? "w-[452px]" : index === 1 ? "w-[570px]" : index === 2 ? "w-[528px]" : index === 3 ? "w-[367px]" : "w-[610px]"} h-[70px]`}
+                className={`relative w-full ${index === 1 || index === 3 ? "md:ml-auto" : ""} min-h-[70px] sm:h-[70px]`}
               >
                 <img
-                  className="absolute top-[-22px] left-[-27px] w-full h-[124px]"
+                  className="absolute top-[-22px] left-[-27px] w-full h-[124px] hidden sm:block"
                   alt="Background shape"
                   src={stat.vectorSrc}
                 />
 
                 <div
-                  className={`absolute top-1.5 ${index === 3 ? "left-5" : "left-5"} flex flex-col ${index === 4 ? "gap-2" : ""}`}
+                  className={`relative sm:absolute sm:top-1.5 ${index === 3 ? "left-5" : "left-5"} flex flex-col ${index === 4 ? "gap-2" : ""} p-4 sm:p-0`}
                 >
                   <div
-                    className={`[font-family:'Inter',Helvetica] ${index === 1 || index === 3 ? "font-semibold" : index === 4 ? "font-semibold" : "font-normal"} text-lg tracking-[0] leading-[28.8px] whitespace-nowrap`}
+                    className={`[font-family:'Inter',Helvetica] ${index === 1 || index === 3 ? "font-semibold" : index === 4 ? "font-semibold" : "font-normal"} text-base sm:text-lg tracking-[0] leading-6 sm:leading-[28.8px]`}
                   >
                     <span
                       className={`${index === 1 || index === 3 ? stat.statColor : "font-bold " + stat.statColor}`}
@@ -346,7 +346,7 @@ export const StatsSection = (): JSX.Element => {
                   </div>
 
                   <div
-                    className={`[font-family:'Inter',Helvetica] font-normal ${stat.textColor} text-base tracking-[0] leading-[28.8px] whitespace-nowrap`}
+                    className={`[font-family:'Inter',Helvetica] font-normal ${stat.textColor} text-sm sm:text-base tracking-[0] leading-6 sm:leading-[28.8px]`}
                   >
                     {stat.source}
                   </div>

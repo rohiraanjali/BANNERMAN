@@ -33,12 +33,12 @@ export const colors = {
 
 export const spacing = {
   section: {
-    py: "py-28",
-    pyLarge: "py-[111px]",
-    pyMedium: "py-20",
-    pySmall: "py-16 md:py-24 lg:py-28",
-    gap: "gap-[75px]",
-    gapLarge: "gap-[69px]",
+    py: "py-12 sm:py-16 md:py-20 lg:py-28",
+    pyLarge: "py-12 sm:py-16 md:py-20 lg:py-[111px]",
+    pyMedium: "py-12 sm:py-16 md:py-20",
+    pySmall: "py-12 sm:py-16 md:py-24 lg:py-28",
+    gap: "gap-8 sm:gap-12 md:gap-[75px]",
+    gapLarge: "gap-8 sm:gap-12 md:gap-[69px]",
   },
   container: {
     maxWidth: {
@@ -50,7 +50,7 @@ export const spacing = {
     padding: {
       default: "px-4",
       medium: "px-4 sm:px-6 md:px-8 lg:px-12 xl:px-[52px]",
-      large: "px-[52px]",
+      large: "px-4 sm:px-6 md:px-8 lg:px-12 xl:px-[52px]",
     },
   },
 } as const;

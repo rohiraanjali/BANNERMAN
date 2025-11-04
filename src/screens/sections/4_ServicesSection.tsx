@@ -61,31 +61,32 @@ export const ServicesSection = (): JSX.Element => {
             buying decisions
           </>
         }
+        descriptionClassName="px-4"
       />
 
-        <div className="w-full max-w-[1216px] flex flex-col gap-8">
-          <div className="grid grid-cols-1 lg:grid-cols-[710px_1fr] gap-8">
+        <div className="w-full max-w-[1216px] flex flex-col gap-6 sm:gap-8 px-4 md:px-0">
+          <div className="grid grid-cols-1 lg:grid-cols-[710px_1fr] gap-6 sm:gap-8">
             <Card className="bg-[#ffffff1a] border-0 rounded-xl overflow-hidden">
-              <CardContent className="p-0 flex items-start gap-8 h-[390px]">
-                <div className="flex flex-col w-[437px] justify-center gap-6 pl-16 py-8">
+              <CardContent className="p-0 flex flex-col md:flex-row items-start gap-4 md:gap-8 min-h-[300px] md:h-[390px]">
+                <div className="flex flex-col w-full md:w-[437px] justify-center gap-4 md:gap-6 pl-6 md:pl-16 py-6 md:py-8">
                   <img
-                    className="w-[84px] h-auto rounded-2xl"
+                    className="w-[64px] md:w-[84px] h-auto rounded-2xl"
                     alt="Service icon"
                     src={servicesData[0].icon}
                   />
 
-                  <div className="flex flex-col gap-4 max-w-[360px]">
-                    <h3 className={`${fonts.text.interSemibold} text-white text-xl tracking-[0] leading-[27px]`}>
+                  <div className="flex flex-col gap-3 md:gap-4 max-w-[360px]">
+                    <h3 className={`${fonts.text.interSemibold} text-white text-lg md:text-xl tracking-[0] leading-[24px] md:leading-[27px]`}>
                       {servicesData[0].title}
                     </h3>
 
-                    <p className={`${fonts.text.jakartaNormal} text-[#ffffffcc] text-base tracking-[0.30px] leading-[25.5px]`}>
+                    <p className={`${fonts.text.jakartaNormal} text-[#ffffffcc] text-sm md:text-base tracking-[0.30px] leading-[22px] md:leading-[25.5px]`}>
                       {servicesData[0].description}
                     </p>
                   </div>
                 </div>
 
-                <div className="flex items-center justify-center w-[261px] h-[390px]">
+                <div className="hidden md:flex items-center justify-center w-[261px] h-[390px]">
                   <img
                     className="w-[241px] h-[355px]"
                     alt="Service illustration"
@@ -96,19 +97,19 @@ export const ServicesSection = (): JSX.Element => {
             </Card>
 
             <Card className="bg-[#ffffff1a] border-0 rounded-xl">
-              <CardContent className="p-16 flex flex-col justify-center gap-6 h-[390px]">
+              <CardContent className="p-8 md:p-16 flex flex-col justify-center gap-4 md:gap-6 min-h-[250px] md:h-[390px]">
                 <img
-                  className="w-[84px] h-auto rounded-2xl"
+                  className="w-[64px] md:w-[84px] h-auto rounded-2xl"
                   alt="Service icon"
                   src={servicesData[1].icon}
                 />
 
-                <div className="flex flex-col gap-4">
-                  <h3 className={`${fonts.text.jakartaSemibold} text-white text-xl tracking-[0] leading-7 max-w-[346px]`}>
+                <div className="flex flex-col gap-3 md:gap-4">
+                  <h3 className={`${fonts.text.jakartaSemibold} text-white text-lg md:text-xl tracking-[0] leading-6 md:leading-7 max-w-[346px]`}>
                     {servicesData[1].title}
                   </h3>
 
-                  <p className={`${fonts.text.interNormal} text-[#ffffffcc] text-base tracking-[0.30px] leading-[25.5px] max-w-[346px]`}>
+                  <p className={`${fonts.text.interNormal} text-[#ffffffcc] text-sm md:text-base tracking-[0.30px] leading-[22px] md:leading-[25.5px] max-w-[346px]`}>
                     {servicesData[1].description}
                   </p>
                 </div>
@@ -116,21 +117,21 @@ export const ServicesSection = (): JSX.Element => {
             </Card>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-[1fr_710px] gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-[1fr_710px] gap-6 sm:gap-8">
             <Card className="bg-[#ffffff1a] border-0 rounded-xl">
-              <CardContent className="p-16 flex flex-col justify-center gap-6 h-[391px]">
+              <CardContent className="p-8 md:p-16 flex flex-col justify-center gap-4 md:gap-6 min-h-[250px] md:h-[391px]">
                 <img
-                  className="w-[84px] h-auto rounded-2xl"
+                  className="w-[64px] md:w-[84px] h-auto rounded-2xl"
                   alt="Service icon"
                   src={servicesData[2].icon}
                 />
 
-                <div className="flex flex-col gap-4">
-                  <h3 className={`${fonts.text.jakartaSemibold} text-white text-xl tracking-[0] leading-7 max-w-[346px]`}>
+                <div className="flex flex-col gap-3 md:gap-4">
+                  <h3 className={`${fonts.text.jakartaSemibold} text-white text-lg md:text-xl tracking-[0] leading-6 md:leading-7 max-w-[346px]`}>
                     {servicesData[2].title}
                   </h3>
 
-                  <p className={`${fonts.text.jakartaNormal} text-[#ffffffcc] text-base tracking-[0.30px] leading-[25.5px] max-w-[346px]`}>
+                  <p className={`${fonts.text.jakartaNormal} text-[#ffffffcc] text-sm md:text-base tracking-[0.30px] leading-[22px] md:leading-[25.5px] max-w-[346px]`}>
                     {servicesData[2].description}
                   </p>
                 </div>
@@ -138,26 +139,26 @@ export const ServicesSection = (): JSX.Element => {
             </Card>
 
             <Card className="bg-[#ffffff1a] border-0 rounded-xl overflow-hidden">
-              <CardContent className="p-0 flex items-start gap-8 h-[391px]">
-                <div className="flex flex-col w-[434px] justify-center gap-[26px] pl-16 py-8">
+              <CardContent className="p-0 flex flex-col md:flex-row items-start gap-4 md:gap-8 min-h-[300px] md:h-[391px]">
+                <div className="flex flex-col w-full md:w-[434px] justify-center gap-4 md:gap-[26px] pl-6 md:pl-16 py-6 md:py-8">
                   <img
-                    className="w-[84px] h-auto rounded-2xl"
+                    className="w-[64px] md:w-[84px] h-auto rounded-2xl"
                     alt="Service icon"
                     src={servicesData[3].icon}
                   />
 
-                  <div className="flex flex-col gap-4 max-w-[386px]">
-                    <h3 className={`${fonts.text.jakartaSemibold} text-white text-xl tracking-[0] leading-[27px]`}>
+                  <div className="flex flex-col gap-3 md:gap-4 max-w-[386px]">
+                    <h3 className={`${fonts.text.jakartaSemibold} text-white text-lg md:text-xl tracking-[0] leading-[24px] md:leading-[27px]`}>
                       {servicesData[3].title}
                     </h3>
 
-                    <p className={`${fonts.text.jakartaNormal} text-[#ffffffcc] text-base tracking-[0.30px] leading-[25.5px]`}>
+                    <p className={`${fonts.text.jakartaNormal} text-[#ffffffcc] text-sm md:text-base tracking-[0.30px] leading-[22px] md:leading-[25.5px]`}>
                       {servicesData[3].description}
                     </p>
                   </div>
                 </div>
 
-                <div className="flex items-center justify-center w-[228px] h-[391px]">
+                <div className="hidden md:flex items-center justify-center w-[228px] h-[391px]">
                   <img
                     className="w-[244px] h-[355px]"
                     alt="Service illustration"
