@@ -44,7 +44,7 @@ export const WhyBannermanSection = (): JSX.Element => {
     <SectionWrapper containerClassName={spacing.section.gap}>
       <SectionHeader
         title="Why"
-        highlight=" BANNERMEN"
+        highlight=" BANNERMAN"
         description="More Than an Agency - A B2B Influence &amp; GTM Partner.."
       />
 

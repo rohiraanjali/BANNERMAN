@@ -56,7 +56,7 @@ export const ServicesSection = (): JSX.Element => {
         highlight="Help"
         description={
           <>
-            At <span className="font-bold">BANNERMEN</span>, We help B2B and tech companies launch and scale influencer-led
+            At <span className="font-bold">BANNERMAN</span>, We help B2B and tech companies launch and scale influencer-led
             GTM strategies that drive awareness, build trust, and accelerate
             buying decisions
           </>
