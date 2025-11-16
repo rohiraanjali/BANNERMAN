@@ -8,51 +8,40 @@ import { SectionHeader } from "../../components/shared/SectionHeader";
 import { fonts } from "../../lib/fonts";
 import { spacing } from "../../lib/constants";
 
-const statsData = [
+interface StatCard {
+  highlight: string;
+  text: string;
+  source: string;
+  isLight?: boolean;
+}
+
+const stats: StatCard[] = [
   {
-    bgColor: "bg-[#00896a]",
-    textColor: "text-white",
-    statColor: "text-[#00ffc6]",
-    stat: "1 Billion",
-    description: "Members in 200+ countries worldwide",
-    source: "Source: LinkedIn",
-    vectorSrc: "/vector.svg",
+    highlight: "1 Billion",
+    text: "Members in 200+ countries worldwide",
+    source: "LinkedIn",
   },
   {
-    bgColor: "bg-white",
-    textColor: "text-black",
-    statColor: "text-[#00896a]",
-    stat: "2x",
-    description: "Conversion rates on LinkedIn compared to other channels",
-    source: "Source: WebFX",
-    vectorSrc: "/vector-3.svg",
+    highlight: "2x",
+    text: "Conversion rates on LinkedIn compared to other channels",
+    source: "WebFX",
+    isLight: true,
   },
   {
-    bgColor: "bg-[#00896a]",
-    textColor: "text-white",
-    statColor: "text-[#00ffc6]",
-    stat: "55%",
-    description: "More likely to buy from brands that use influencers",
-    source: "Source: Capterra",
-    vectorSrc: "/vector-2.svg",
+    highlight: "55%",
+    text: "More likely to buy from brands that use influencers",
+    source: "Capterra",
   },
   {
-    bgColor: "bg-white",
-    textColor: "text-black",
-    statColor: "text-[#00896a]",
-    stat: "$33.80",
-    description: "Average CPM of LinkedIn Ads",
-    source: "Source: LinkedIn",
-    vectorSrc: "/vector-7.svg",
+    highlight: "$33.80",
+    text: "Average CPM of LinkedIn Ads",
+    source: "LinkedIn",
+    isLight: true,
   },
   {
-    bgColor: "bg-[#221f29]",
-    textColor: "text-white",
-    statColor: "text-[#00ffc6]",
-    stat: "6.5x",
-    description: "ROI average for businesses investing in Influencer Marketing",
-    source: "Source: Saleslion",
-    vectorSrc: "/vector-4.svg",
+    highlight: "6.5x",
+    text: "ROI average for businesses investing in Influencer Marketing",
+    source: "Saleslion",
   },
 ];
 
@@ -77,13 +66,12 @@ const profileCards = [
     buttonPadding: "px-[15.5px] py-[10.33px]",
     buttonIconSize: "w-[16.53px] h-[16.53px]",
     buttonTextSize: "text-[16.5px]",
-    buttonBg: "bg-[#2d64bc]",
     buttonTextColor: "text-white",
     aboutGap: "gap-[15.5px]",
     aboutPadding: "p-[15.5px]",
-    aboutTitleSize: "text-[20.7px]",
-    aboutTitleLeading: "leading-[22.6px]",
-    aboutTextSize: "text-[18.6px]",
+    aboutTitleSize: "text-[18.8px]",
+    aboutTitleLeading: "leading-[20.1px]",
+    aboutTextSize: "text-[16.6px]",
     aboutTextLeading: "leading-[22.6px]",
     companyLogoSize: "w-[58.37px] h-[58.37px]",
     companyNameSize: "text-[20.4px]",
@@ -93,7 +81,7 @@ const profileCards = [
     logoTop: "top-3.5",
     logoRight: "right-[15px]",
     logoSize: "w-[37px] h-[34px]",
-    logoSrc: "/group-35423.png",
+    logoSrc: "/assets/creator-marketing/Linkedin.svg",
   },
   {
     scale: "scale-[0.98]",
@@ -115,13 +103,12 @@ const profileCards = [
     buttonPadding: "px-[16.36px] py-[10.91px]",
     buttonIconSize: "w-[17.45px] h-[17.45px]",
     buttonTextSize: "text-[17.5px]",
-    buttonBg: "bg-[#2d64bc]",
     buttonTextColor: "text-white",
     aboutGap: "gap-[16.36px]",
     aboutPadding: "p-[16.36px]",
-    aboutTitleSize: "text-[21.8px]",
-    aboutTitleLeading: "leading-[23.9px]",
-    aboutTextSize: "text-[19.6px]",
+    aboutTitleSize: "text-[18.8px]",
+    aboutTitleLeading: "leading-[20.1px]",
+    aboutTextSize: "text-[16.6px]",
     aboutTextLeading: "leading-[23.9px]",
     companyLogoSize: "w-[61.62px] h-[61.62px]",
     companyNameSize: "text-[21.5px]",
@@ -131,7 +118,7 @@ const profileCards = [
     logoTop: "top-[15px]",
     logoRight: "right-4",
     logoSize: "w-[39px] h-9",
-    logoSrc: "/group-35423-1.png",
+    logoSrc: "/assets/creator-marketing/Linkedin.svg",
   },
   {
     scale: "scale-100",
@@ -153,13 +140,12 @@ const profileCards = [
     buttonPadding: "px-[17.22px] py-[11.48px]",
     buttonIconSize: "w-[18.37px] h-[18.37px]",
     buttonTextSize: "text-[18.4px]",
-    buttonBg: "bg-[#00ffc6]",
     buttonTextColor: "text-neutral-900",
     aboutGap: "gap-[17.22px]",
     aboutPadding: "p-[17.22px]",
-    aboutTitleSize: "text-[23px]",
-    aboutTitleLeading: "leading-[25.1px]",
-    aboutTextSize: "text-[20.7px]",
+    aboutTitleSize: "text-[18.8px]",
+    aboutTitleLeading: "leading-[20.1px]",
+    aboutTextSize: "text-[16.6px]",
     aboutTextLeading: "leading-[25.1px]",
     companyLogoSize: "w-[64.86px] h-[64.86px]",
     companyNameSize: "text-[22.6px]",
@@ -169,192 +155,179 @@ const profileCards = [
     logoTop: "top-[15px]",
     logoRight: "right-[17px]",
     logoSize: "w-[41px] h-[41px]",
-    logoSrc: "/group-35423-2.png",
+    logoSrc: "/assets/creator-marketing/Linkedin.svg",
   },
 ];
 
 export const StatsSection = (): JSX.Element => {
   return (
-    <SectionWrapper
-      sectionPadding={spacing.section.pyLarge}
-      maxWidth="large"
-      containerClassName="justify-center"
-    >
+ <SectionWrapper containerClassName={spacing.section.gap}>   
       <SectionHeader
         title="These "
-        highlight="Stats"
+        highlight="Stats don't lie"
         titleClassName="whitespace-nowrap"
       />
-      <div className="flex flex-col items-center gap-4 sm:gap-6 w-full">
+      {/* <div className="flex flex-col items-center gap-4 sm:gap-6 w-full">
         <h2 className={`${fonts.anton} font-normal text-[28px] sm:text-[36px] md:text-[42px] lg:text-[52px] text-center tracking-[0] leading-[34px] sm:leading-[42px] md:leading-[50px] lg:leading-[62.4px]`}>
-          <span className="text-white"> don&apos;t lie</span>
         </h2>
-      </div>
+      </div> */}
 
-        <div className="flex flex-col lg:flex-row items-center justify-center gap-8 sm:gap-12 lg:gap-[54px] w-full px-4 md:px-0">
-          <div className="relative w-full max-w-[545.37px] h-[300px] sm:h-[400px] md:h-[469.59px] flex-shrink-0 hidden md:block">
-            {profileCards.map((card, index) => (
-              <Card
-                key={index}
-                className={`absolute ${card.top} ${card.left} ${card.width} ${card.height} ${card.zIndex} ${card.scale} bg-neutral-900 ${card.rounded} overflow-hidden border-[none] before:content-[''] before:absolute before:inset-0 ${card.borderWidth} ${card.borderRadius} before:[background:linear-gradient(180deg,rgba(255,255,255,0.29)_0%,rgba(239,239,239,0.02)_100%)] before:[-webkit-mask:linear-gradient(#fff_0_0)_content-box,linear-gradient(#fff_0_0)] before:[-webkit-mask-composite:xor] before:[mask-composite:exclude] before:z-[1] before:pointer-events-none`}
+      <div className="flex flex-col lg:flex-row items-center justify-center gap-8 sm:gap-12 lg:gap-[54px] w-full px-4 md:px-0">
+        <div className="relative w-full max-w-[545.37px] h-[300px] sm:h-[400px] md:h-[469.59px] flex-shrink-0 hidden md:block">
+          {profileCards.map((card, index) => (
+            <Card
+              key={index}
+              className={`absolute ${card.top} ${card.left} ${card.width} ${card.height} ${card.zIndex} ${card.scale} bg-neutral-900 ${card.rounded} overflow-hidden border-[none] before:content-[''] before:absolute before:inset-0 ${card.borderWidth} ${card.borderRadius} before:[background:linear-gradient(180deg,rgba(255,255,255,0.29)_0%,rgba(239,239,239,0.02)_100%)] before:[-webkit-mask:linear-gradient(#fff_0_0)_content-box,linear-gradient(#fff_0_0)] before:[-webkit-mask-composite:xor] before:[mask-composite:exclude] before:z-[1] before:pointer-events-none`}
+            >
+              <CardContent
+                className={`${card.padding} flex flex-col gap-[40.3px] h-full`}
               >
-                <CardContent
-                  className={`${card.padding} flex flex-col gap-[40.3px] h-full`}
-                >
-                  <div className="flex items-center gap-[20.67px] w-full">
-                    <Avatar
-                      className={`${card.avatarSize} ${card.avatarRounded}`}
-                    >
-                      <AvatarImage
-                        src="assets/profile/kevin.png"
-                        alt="Kévin Moënne-Loccoz"
-                        className="object-cover"
-                      />
-                    </Avatar>
+                <div className="flex items-center gap-[20.67px] w-full">
+                  <Avatar
+                    className={`${card.avatarSize} ${card.avatarRounded}`}
+                  >
+                    <AvatarImage
+                      src="/assets/creator-marketing/morgan.jpeg"
+                      alt="Kévin Moënne-Loccoz"
+                      className="object-cover"
+                    />
+                  </Avatar>
 
-                    <div className="flex flex-col gap-[10.33px] flex-1">
-                      <div
-                        className={`[font-family:'Inter',Helvetica] font-semibold text-[#ffffffcc] ${card.nameSize} ${card.nameLeading} tracking-[0] whitespace-nowrap`}
-                      >
-                        Kévin Moënne-Loccoz
-                      </div>
-
-                      <div
-                        className={`[font-family:'Inter',Helvetica] font-medium text-[#ffffff4c] ${card.connectionSize} ${card.connectionLeading} tracking-[0] whitespace-nowrap`}
-                      >
-                        {index === 2 ? "1,11,099 Followers" : "500+connections"}
-                      </div>
-
-                      <Button
-                        className={`${card.buttonPadding} ${card.buttonBg} rounded-full h-auto gap-[8.27px]`}
-                      >
-                        <UserPlusIcon
-                          className={`${card.buttonIconSize} ${card.buttonTextColor}`}
-                        />
-                        <span
-                          className={`[font-family:'Inter',Helvetica] font-bold ${card.buttonTextColor} ${card.buttonTextSize} tracking-[-0.33px]`}
-                        >
-                          Connect
-                        </span>
-                      </Button>
-                    </div>
-                  </div>
-
-                  <div className={`flex flex-col ${card.aboutGap} w-full`}>
+                  <div className="flex flex-col gap-[10.33px] flex-1">
                     <div
-                      className={`flex flex-col gap-[10.33px] ${card.aboutPadding} bg-[#ffffff05] ${card.rounded} border-[none] before:content-[''] before:absolute before:inset-0 ${card.borderWidth} ${card.borderRadius} before:[background:linear-gradient(180deg,rgba(255,255,255,0.29)_0%,rgba(239,239,239,0.02)_100%)] before:[-webkit-mask:linear-gradient(#fff_0_0)_content-box,linear-gradient(#fff_0_0)] before:[-webkit-mask-composite:xor] before:[mask-composite:exclude] before:z-[1] before:pointer-events-none relative`}
+                      className={`[font-family:'Inter',Helvetica] font-semibold text-[#ffffffcc] ${card.nameSize} ${card.nameLeading} tracking-[0] whitespace-nowrap`}
                     >
-                      <div
-                        className={`[font-family:'Inter',Helvetica] font-semibold text-[#ffffffcc] ${card.aboutTitleSize} ${card.aboutTitleLeading} tracking-[0] whitespace-nowrap`}
-                      >
-                        About
-                      </div>
-
-                      <div className="flex items-start gap-[10.33px]">
-                        <div
-                          className={`[font-family:'Inter',Helvetica] font-medium text-[#ffffff80] ${card.aboutTextSize} ${card.aboutTextLeading} tracking-[0] whitespace-nowrap`}
-                        >
-                          Tell me a time you implement
-                        </div>
-
-                        <div
-                          className={`[font-family:'Inter',Helvetica] font-normal text-[#ffffff80] ${card.aboutTextSize} ${card.aboutTextLeading} tracking-[0] underline whitespace-nowrap`}
-                        >
-                          see more...
-                        </div>
-                      </div>
+                      Morgan J Ingram
                     </div>
 
                     <div
-                      className={`flex flex-col ${card.aboutPadding} bg-[#ffffff05] ${card.rounded} border-[none] before:content-[''] before:absolute before:inset-0 ${card.borderWidth} ${card.borderRadius} before:[background:linear-gradient(180deg,rgba(255,255,255,0.29)_0%,rgba(239,239,239,0.02)_100%)] before:[-webkit-mask:linear-gradient(#fff_0_0)_content-box,linear-gradient(#fff_0_0)] before:[-webkit-mask-composite:xor] before:[mask-composite:exclude] before:z-[1] before:pointer-events-none relative`}
+                      className={`[font-family:'Inter',Helvetica] font-medium text-[#ffffff4c] ${card.connectionSize} ${card.connectionLeading} tracking-[0] whitespace-nowrap`}
                     >
-                      <div className="flex items-center gap-[16.36px] mb-4">
-                        <img
-                          className={`${card.companyLogoSize}`}
-                          alt="lemlist logo"
-                          src="/vector-1.svg"
-                        />
-
-                        <div className="flex flex-col gap-[10.91px]">
-                          <div
-                            className={`[font-family:'Inter',Helvetica] font-semibold text-[#ffffffcc] ${card.companyNameSize} ${card.companyNameLeading} tracking-[0] whitespace-nowrap`}
-                          >
-                            lemlist
-                          </div>
-
-                          <div
-                            className={`[font-family:'Inter',Helvetica] font-medium text-[#ffffff80] ${card.companyRoleSize} ${card.companyRoleLeading} tracking-[0] whitespace-nowrap`}
-                          >
-                            Head of Growth
-                          </div>
-                        </div>
-                      </div>
-
-                      <img
-                        className="w-full"
-                        alt="Experience timeline"
-                        src={
-                          index === 0
-                            ? "/frame-95262.svg"
-                            : index === 1
-                              ? "/frame-95262-1.svg"
-                              : "/frame-95262-2.svg"
-                        }
-                      />
+                      {index === 2 ? "1,88,679 followers" : "500+connections"}
                     </div>
-                  </div>
 
-                  <img
-                    className={`absolute ${card.logoTop} ${card.logoRight} ${card.logoSize}`}
-                    alt="LinkedIn logo"
-                    src={card.logoSrc}
-                  />
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-
-          <div className="flex flex-col items-start justify-center gap-4 sm:gap-[15px] w-full max-w-[622px]">
-            {statsData.map((stat, index) => (
-              <div
-                key={index}
-                className={`relative w-full ${index === 1 || index === 3 ? "md:ml-auto" : ""} min-h-[70px] sm:h-[70px]`}
-              >
-                <img
-                  className="absolute top-[-22px] left-[-27px] w-full h-[124px] hidden sm:block"
-                  alt="Background shape"
-                  src={stat.vectorSrc}
-                />
-
-                <div
-                  className={`relative sm:absolute sm:top-1.5 ${index === 3 ? "left-5" : "left-5"} flex flex-col ${index === 4 ? "gap-2" : ""} p-4 sm:p-0`}
-                >
-                  <div
-                    className={`[font-family:'Inter',Helvetica] ${index === 1 || index === 3 ? "font-semibold" : index === 4 ? "font-semibold" : "font-normal"} text-base sm:text-lg tracking-[0] leading-6 sm:leading-[28.8px]`}
-                  >
-                    <span
-                      className={`${index === 1 || index === 3 ? stat.statColor : "font-bold " + stat.statColor}`}
+                    <Button
+                      className={`${card.buttonPadding} bg-[#00ffc6] rounded-full h-auto gap-[8.27px]`}
                     >
-                      {stat.stat}
-                    </span>
-                    <span
-                      className={`${index === 1 || index === 3 ? stat.textColor : "font-semibold " + stat.textColor}`}
-                    >
-                      {" "}
-                      {stat.description}
-                    </span>
-                  </div>
-
-                  <div
-                    className={`[font-family:'Inter',Helvetica] font-normal ${stat.textColor} text-sm sm:text-base tracking-[0] leading-6 sm:leading-[28.8px]`}
-                  >
-                    {stat.source}
+                      <UserPlusIcon
+                        className={`${card.buttonIconSize} ${card.buttonTextColor}`}
+                      />
+                      <span
+                        className={`[font-family:'Inter',Helvetica] font-bold ${card.buttonTextColor} ${card.buttonTextSize} tracking-[-0.33px]`}
+                      >
+                        Connect
+                      </span>
+                    </Button>
                   </div>
                 </div>
-              </div>
-            ))}
-          </div>
+
+                <div className={`flex flex-col ${card.aboutGap} w-full`}>
+                  <div
+                    className={`flex flex-col gap-[10.33px] ${card.aboutPadding} bg-[#ffffff05] ${card.rounded} border-[none] 
+    before:content-[''] before:absolute before:inset-0 ${card.borderWidth} ${card.borderRadius} 
+    before:[background:linear-gradient(180deg,rgba(255,255,255,0.29)_0%,rgba(239,239,239,0.02)_100%)] 
+    before:[-webkit-mask:linear-gradient(#fff_0_0)_content-box,linear-gradient(#fff_0_0)] 
+    before:[-webkit-mask-composite:xor] 
+    before:[mask-composite:exclude] 
+    before:z-[1] 
+    before:pointer-events-none 
+    relative`}
+                  >
+
+                    <div
+                      className={`[font-family:'Inter',Helvetica] font-semibold text-[#ffffffcc] ${card.aboutTitleSize} ${card.aboutTitleLeading} tracking-[0] whitespace-nowrap`}
+                    >
+                      About
+                    </div>
+
+                    <div className="flex items-start gap-[10.33px]">
+                      <div
+                        className={`[font-family:'Inter',Helvetica] font-medium text-[#ffffff80] ${card.aboutTextSize} ${card.aboutTextLeading} tracking-[0] whitespace-nowrap`}
+                      >
+                        For B2B Teams That Want Outbound → Reve..
+                      </div>
+
+
+                    </div>
+                  </div>
+
+                  <div
+                    className={`flex flex-col ${card.aboutPadding} bg-[#ffffff05] ${card.rounded} border-[none] before:content-[''] before:absolute before:inset-0 ${card.borderWidth} ${card.borderRadius} before:[background:linear-gradient(180deg,rgba(255,255,255,0.29)_0%,rgba(239,239,239,0.02)_100%)] before:[-webkit-mask:linear-gradient(#fff_0_0)_content-box,linear-gradient(#fff_0_0)] before:[-webkit-mask-composite:xor] before:[mask-composite:exclude] before:z-[1] before:pointer-events-none relative`}
+                  >
+                    <div className="flex items-center gap-[16.36px] mb-4 rounded-500">
+                      <img
+                        className={`${card.companyLogoSize} rounded-full`}
+                        alt="luster logo"
+                        src="/assets/creator-marketing/luster_ai_logo.jpeg"
+                      />
+
+                      <div className="flex flex-col gap-[10.91px]">
+                        <div
+                          className={`[font-family:'Inter',Helvetica] font-semibold text-[#ffffffcc] ${card.companyNameSize} ${card.companyNameLeading} tracking-[0] whitespace-nowrap`}
+                        >
+                          Luster
+                        </div>
+
+                        <div
+                          className={`[font-family:'Inter',Helvetica] font-medium text-[#ffffff80] ${card.companyRoleSize} ${card.companyRoleLeading} tracking-[0] whitespace-nowrap`}
+                        >
+                          GTM and Content Advisor
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <img
+                  className={`absolute ${card.logoTop} ${card.logoRight} ${card.logoSize}`}
+                  alt="LinkedIn logo"
+                  src={card.logoSrc}
+                />
+              </CardContent>
+            </Card>
+          ))}
         </div>
+
+        <div className="flex flex-col items-start justify-center gap-4 sm:gap-[15px] w-full max-w-[622px]">
+          {stats.map((stat, index) => (
+            <div
+              key={index}
+              className={`relative rounded-2xl px-6 py-3 inline-block ${index % 2 === 0 ? "self-start" : "self-end"
+                } ${stat.isLight ? "bg-[#b8fff0]" : "bg-[#1a1a1a]"} animate-pulseNeon`}
+              style={{
+                border: "2px solid rgba(0,255,195,1)",
+                boxShadow:
+                  "0 0 15px rgba(0,255,195,0.4), 0 0 40px rgba(0,255,195,0.25), inset 0 0 20px rgba(0,255,195,0.15)",
+              }}
+            >
+              <p
+                className={`font-semibold leading-snug ${stat.isLight ? "text-black" : "text-white"
+                  }`}
+                style={{
+                  fontSize: "18px",
+                }}
+              >
+                <span
+                  className="mr-1"
+                  style={{
+                    color: index % 2 === 0 ? "#00ffc3" : "#008A6B",
+                  }}
+                >
+                  {stat.highlight}
+                </span>
+                {stat.text}
+              </p>
+              <p
+                className={`mt-1 opacity-80 ${stat.isLight ? "text-black" : "text-gray-300"
+                  }`}
+                style={{ fontSize: "16px" }}
+              >
+                Source: {stat.source}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
     </SectionWrapper>
   );
 };

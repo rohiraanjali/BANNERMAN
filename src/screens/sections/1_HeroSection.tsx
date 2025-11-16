@@ -3,11 +3,17 @@ import { Button } from "../../components/ui/button";
 import { fonts } from "../../lib/fonts";
 
 const navButtons = [
-  {
-    text: "BOOK A CALL",
-    variant: "default" as const,
-    className: "bg-black text-[#00ffc6] border-black hover:bg-black/90",
-  },
+{
+  text: "BOOK A CALL",
+  variant: "default" as const,
+    className: `
+    h-auto w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4
+    bg-black text-[#00ffc6] border-2 border-black
+    transition-all duration-300
+    hover:text-white hover:shadow-[0_0_15px_4px_rgba(255,255,255,0.8)]
+  `,
+
+},
   {
     text: "FOR CREATORS",
     variant: "outline" as const,
@@ -18,40 +24,36 @@ const navButtons = [
 
 const logos = [
   {
-    src: "/logos/logo_1.png",
+    src: "/assets/stack-logos/linkedin_black-logo_brandlogos.net_qahzv.png",
     className: "top-[calc(50.00%_-_18px)] h-9",
   },
   {
-    src: "/logos/logo_2.jpg",
-    className: "top-[calc(50.00%_-_26px)] h-[52px]",
+    src: "/assets/stack-logos/x-social-media-black-icon.png",
+    className: "top-[calc(50.00%_-_26px)] h-[36px]",
   },
   {
-    src: "/logos/logo_3.png",
-    className: "top-[calc(50.00%_-_25px)] h-[50px]",
+    src: "/assets/stack-logos/youtube-2-logo-black-and-white.png",
+    className: "top-[calc(50.00%_-_26px)] h-[40px]",
   },
   {
-    src: "/logos/logo_4.png",
-    className: "top-[calc(50.00%_-_21px)] h-[42px]",
+    src: "/assets/stack-logos/tiktok-logo.webp",
+    className: "top-[calc(50.00%_-_21px)] h-[40px]",
   },
   {
-    src: "/logos/logo_5.jpg",
-    className: "top-[calc(50.00%_-_26px)] h-[52px]",
-  },
-  {
-    src: "/logos/logo_6.png",
+    src: "/assets/stack-logos/Black_Spotify_logo_with_text.svg.png",
     className: "top-[calc(50.00%_-_23px)] h-[46px]",
   },
   {
-    src: "/logos/logo_7.png",
-    className: "top-[calc(50.00%_-_23px)] h-[46px]",
+    src: "/assets/stack-logos/Beehiv-logo.png",
+    className: "top-[calc(50.00%_-_28px)] h-[40px]",
   },
   {
-    src: "/logos/logo_8.png",
-    className: "top-[calc(50.00%_-_28px)] h-[55px]",
+    src: "/assets/stack-logos/Medium-logo.svg",
+    className: "top-[calc(50.00%_-_23px)] h-[36px]",
   },
-  {
-    src: "/logos/logo_9.png",
-    className: "top-[calc(50.00%_-_23px)] h-[46px]",
+    {
+    src: "/assets/stack-logos/substack-logo.svg",
+    className: "top-[calc(50.00%_-_30px)] h-[30px]",
   },
 ];
 
@@ -89,17 +91,38 @@ export const HeroSection = (): JSX.Element => {
           <img
             className="w-full max-w-[994px] h-auto px-4 sm:px-0"
             alt="Hero graphic"
-            src="/assets/bannerman.svg"
+            src="/assets/logo-main.svg"
           />
 
-          <div className="w-full max-w-[636px] rounded-lg border-r border-l border-[#151304] py-3 sm:py-4 px-4 sm:px-6 flex items-center justify-center">
-            <h1 className={`${fonts.heading.hero} text-[#151304] text-center text-[20px] sm:text-[24px] md:text-[28px] leading-[28px] sm:leading-[32px] md:leading-[37px]`}>
+          <div className="w-full sm: w-[200px] max-w-[636px] rounded-lg border-r border-l border-[#151304] flex items-center justify-center">
+            <h1 className={`${fonts.heading.hero} text-[#151304] text-center md:text-[28px] text-[18px]`}>
               Your Partner for Influencer-Led B2B Growth
             </h1>
           </div>
+          <br />
+          <br />
+          <br />
+          <br />
 
-          <Button className="h-[56px] sm:h-[64px] md:h-[71px] px-6 sm:px-[24px] md:px-[30px] bg-black rounded-[40px] hover:bg-black/90">
-            <span className={`${fonts.body.button} text-[#00ffc6] text-[16px] sm:text-[20px] md:text-[23px]`}>
+          <Button className="
+    h-[56px] sm:h-[64px] md:h-[71px]
+    px-6 sm:px-[24px] md:px-[30px]
+    bg-black rounded-[40px]
+    border-2 border-black
+    transition-all duration-300
+    hover:text-white
+    hover:shadow-[0_0_15px_4px_rgba(255,255,255,0.8)]
+  "
+>
+            <span
+    className={`
+      ${fonts.body.button}
+      text-[#00ffc6]
+      text-[18px] sm:text-[18px] md:text-[18px]
+      transition-colors duration-300
+      hover:text-white
+    `}
+  >
               LET'S CHAT
             </span>
           </Button>
@@ -111,9 +134,9 @@ export const HeroSection = (): JSX.Element => {
 
         <div className="absolute left-[90%] w-[10%] h-full top-0 bg-[linear-gradient(270deg,rgba(0,255,198,1)_0%,rgba(0,255,198,0)_100%)] z-10" />
 
-        <div 
-          className="flex absolute left-0 whitespace-nowrap logo-strip" 
-          style={{ 
+        <div
+          className="flex absolute left-0 whitespace-nowrap logo-strip"
+          style={{
             animation: "marquee-left-to-right 40s linear infinite",
             willChange: "transform"
           }}

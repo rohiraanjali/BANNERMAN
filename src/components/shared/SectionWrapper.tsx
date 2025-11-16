@@ -24,7 +24,7 @@ export const SectionWrapper: React.FC<SectionWrapperProps> = ({
   sectionPadding = spacing.section.py,
 }) => {
   return (
-    <section className={cn("relative w-full bg-black", sectionPadding, className)}>
+    <section className={cn("relative w-full bg-black border-none", sectionPadding, className)}>
       <div
         className={cn(
           "mx-auto flex flex-col items-center",

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { Card, CardContent } from "../../components/ui/card";
 import { ScrollArea, ScrollBar } from "../../components/ui/scroll-area";
 import { SectionHeader } from "../../components/shared/SectionHeader";
@@ -39,17 +39,48 @@ const features = [
   },
 ];
 
-export const WhyBannermanSection = (): JSX.Element => {
+export const WhyBannermenSection = (): JSX.Element => {
+  const scrollRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+
+    const speed = 2; // pixels per frame
+    let frame: number;
+    let startTime = Date.now();
+
+    const scroll = () => {
+      const elapsed = Date.now() - startTime;
+
+      // Stop after 3 seconds (3000ms)
+      if (elapsed >= 3000) {
+        cancelAnimationFrame(frame);
+        return;
+      }
+
+      el.scrollLeft += speed;
+      frame = requestAnimationFrame(scroll);
+    };
+
+    frame = requestAnimationFrame(scroll);
+
+    return () => cancelAnimationFrame(frame);
+  }, []);
+
   return (
     <SectionWrapper containerClassName={spacing.section.gap}>
       <SectionHeader
         title="Why"
-        highlight=" BANNERMAN"
+        highlight=" Bannermen"
         description="More Than an Agency - A B2B Influence &amp; GTM Partner.."
       />
 
       <ScrollArea className="w-full">
-        <div className="flex items-center gap-6 sm:gap-8 md:gap-10 pb-4 px-4 md:px-0">
+        <div
+          ref={scrollRef}
+          className="flex items-center gap-6 sm:gap-8 md:gap-10 pb-4 px-4 md:px-0 overflow-x-auto scroll-smooth"
+        >
           {features.map((feature, index) => (
             <Card
               key={index}
@@ -61,13 +92,15 @@ export const WhyBannermanSection = (): JSX.Element => {
                   alt={feature.title}
                   src={feature.icon}
                 />
-
                 <div className="flex flex-col items-center gap-3 sm:gap-4 w-full">
-                  <h3 className={`${fonts.text.jakartaBold} text-white text-lg sm:text-xl text-center tracking-[0] leading-6 sm:leading-[28.5px]`}>
+                  <h3
+                    className={`${fonts.text.jakartaBold} text-white text-lg sm:text-xl text-center tracking-[0] leading-6 sm:leading-[28.5px]`}
+                  >
                     {feature.title}
                   </h3>
-
-                  <p className={`${fonts.text.interNormal} text-[#a5abb6] text-sm sm:text-base text-center tracking-[0] leading-6 sm:leading-[25.5px] max-w-[333px]`}>
+                  <p
+                    className={`${fonts.text.interNormal} text-[#a5abb6] text-sm sm:text-base text-center tracking-[0] leading-6 sm:leading-[25.5px] max-w-[333px]`}
+                  >
                     {feature.description}
                   </p>
                 </div>

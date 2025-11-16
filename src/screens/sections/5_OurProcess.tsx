@@ -10,31 +10,31 @@ const processSteps = [
     title: "Strategy & Research",
     description:
       "We analyze your audience, industry, and category trends to craft messaging that resonates.",
-    icon: "/icon-of-matching-magnifying-glass.png",
+    icon: "/assets/creator-marketing/Strategy.svg",
   },
   {
     title: "Creator Selection & Coordination",
     description:
       "We tap into 500+ vetted creators who are trusted voices in tech, SaaS, and AI.",
-    icon: "/icon-of-management.png",
+    icon: "/assets/creator-marketing/Creator.svg",
   },
   {
     title: "Creative & Content Production",
     description:
       "We script and produce launch videos, posts, and visuals that spark conversation.",
-    icon: "/icon-of-management-1.png",
+    icon: "/assets/creator-marketing/Creative.svg",
   },
   {
     title: "Rollout & Momentum Building",
     description:
       "We engineer multi-week creator campaigns to sustain traction across B2B Social channel like Linkedin, X, Newsletters, Youtube etc.",
-    icon: "/icon-of-management-2.png",
+    icon: "/assets/creator-marketing/Rollout.svg",
   },
   {
     title: "Performance Tracking",
     description:
       "Every creator post is tracked with custom UTMs monitored live through HubSpot dashboards — giving you clarity on reach, clicks, and conversions.",
-    icon: "/icon-monetize.png",
+    icon: "/assets/creator-marketing/Performance.svg",
   },
 ];
 

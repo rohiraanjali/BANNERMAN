@@ -12,7 +12,7 @@ export const FooterSection = (): JSX.Element => {
   return (
     <footer className={`w-full ${colors.background.darkGreen} py-8 sm:py-12`}>
       <div className="flex flex-col items-center gap-6 sm:gap-8 px-4">
-        <nav className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 border-b border-[#00ffc6] pb-3 w-full">
+        <nav className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 border-b border-[#00ffc6] pb-3 w-50">
           {navigationLinks.map((link, index) => (
             <button
               key={index}

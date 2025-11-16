@@ -1,1 +1,1 @@
-export { Bannerman } from "./Bannerman";
+export { Bannermen } from "./Bannermen";
