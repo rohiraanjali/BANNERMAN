@@ -161,7 +161,7 @@ const profileCards = [
 
 export const StatsSection = (): JSX.Element => {
   return (
- <SectionWrapper containerClassName={spacing.section.gap}>   
+    <SectionWrapper containerClassName={spacing.section.gap}>
       <SectionHeader
         title="These "
         highlight="Stats don't lie"

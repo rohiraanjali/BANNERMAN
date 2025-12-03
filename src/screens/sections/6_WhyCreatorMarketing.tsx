@@ -14,7 +14,7 @@ const featureCards = [
     mockup: (
       <div className="absolute w-[99.66%] h-[81.50%] top-[18.25%] left-0">
         <img
-          className="top-[76px] left-52 w-[170px] h-[172px]"
+          className="absolute sm-visible top-[76px] left-52 w-[170px] h-[172px]"
           alt="Div text design"
           src="/assets/creator-marketing/div.text-design-orbit-1.svg"
         />
