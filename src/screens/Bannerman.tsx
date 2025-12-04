@@ -15,7 +15,7 @@ export const Bannermen = (): JSX.Element => {
   return (
     <div className="flex flex-col w-full">
       <HeroSection />
-      <WhyChooseUsSection />
+    
       <MainContentSection />
       <ServicesSection />
       <FeaturesSection />

@@ -3,9 +3,10 @@ import { Button } from "../../components/ui/button";
 import { fonts } from "../../lib/fonts";
 
 const navButtons = [
-{
-  text: "BOOK A CALL",
-  variant: "default" as const,
+  {
+    text: "BOOK A CALL",
+    href: "https://calendly.com/bannermen",
+    variant: "default" as const,
     className: `
     h-auto w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4
     bg-black text-[#00ffc6] border-2 border-black
@@ -13,9 +14,10 @@ const navButtons = [
     hover:text-white hover:shadow-[0_0_15px_4px_rgba(255,255,255,0.8)]
   `,
 
-},
+  },
   {
     text: "FOR CREATORS",
+    href: "https://x4jb96vcirt.typeform.com/to/cgf2g99q",
     variant: "outline" as const,
     className:
       "bg-transparent text-[#151304] border-[#151304] hover:bg-[#151304]/10",
@@ -51,7 +53,7 @@ const logos = [
     src: "/assets/stack-logos/Medium-logo.svg",
     className: "top-[calc(50.00%_-_23px)] h-[36px]",
   },
-    {
+  {
     src: "/assets/stack-logos/substack-logo.svg",
     className: "top-[calc(50.00%_-_30px)] h-[30px]",
   },
@@ -77,9 +79,9 @@ export const HeroSection = (): JSX.Element => {
                 variant={button.variant}
                 className={`h-[36px] sm:h-[38px] md:h-[42px] px-3 sm:px-4 md:px-[17px] rounded-[100px] text-[10px] sm:text-xs ${button.className}`}
               >
-                <span className={fonts.body.xs}>
+                <a href={button.href} target="_blank" rel="noopener noreferrer">
                   {button.text}
-                </span>
+                </a>
               </Button>
             ))}
           </div>
@@ -113,8 +115,10 @@ export const HeroSection = (): JSX.Element => {
     hover:text-white
     hover:shadow-[0_0_15px_4px_rgba(255,255,255,0.8)]
   "
->
-            <span
+          >
+
+          <a
+    href="https://calendly.com/bannermen"
     className={`
       ${fonts.body.button}
       text-[#00ffc6]
@@ -122,9 +126,11 @@ export const HeroSection = (): JSX.Element => {
       transition-colors duration-300
       hover:text-white
     `}
+    target="_blank"
+    rel="noopener noreferrer"
   >
-              LET'S CHAT
-            </span>
+    LET'S CHAT
+  </a>
           </Button>
         </div>
       </div>

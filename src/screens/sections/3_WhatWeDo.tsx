@@ -82,7 +82,7 @@ export const MainContentSection = (): JSX.Element => {
 					>
 						&quot;
 					</span>
-					<span className={`font-semibold ${colors.text.black} text-[14px] sm:text-[16px] md:text-[20px] lg:text-[30px] xl:text-[40px] tracking-[-0.2px] sm:tracking-[-0.25px] md:tracking-[-0.32px] leading-[20px] ]`}>
+					<span className={`font-semibold ${colors.text.black} text-[14px] sm:text-[16px] md:text-[20px] lg:text-[30px] xl:text-[40px] tracking-[-0.2px] sm:tracking-[-0.25px] md:tracking-[-0.32px] leading-[22px] ]`}>
 							Our in-house filmmakers, designers, and writers also helps craft videos, visuals, and thought-leadership content that earns engagement and drives action  🎉
           </span>
 				</div>
