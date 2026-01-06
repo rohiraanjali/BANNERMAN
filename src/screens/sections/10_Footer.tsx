@@ -7,7 +7,7 @@ import { Linkedin, Twitter, Mail } from "lucide-react";
 const navigationLinks = [
   {
     text: "LinkedIn",
-    href: "https://www.linkedin.com/in/YOUR_USERNAME/",
+    href: "https://www.linkedin.com/company/getbannermen/",
     icon: <Linkedin size={18} />,
   },
   {
@@ -17,7 +17,7 @@ const navigationLinks = [
   },
   {
     text: "Mail",
-    href: "mailto:yourmail@example.com",
+    href: "mailto:anjali@getbannermen.com",
     icon: <Mail size={18} />,
   },
 ];
