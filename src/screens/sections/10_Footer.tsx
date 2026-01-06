@@ -52,7 +52,7 @@ export const FooterSection = (): JSX.Element => {
         <div
           className={`${fonts.text.jakartaNormal} ${colors.text.cyan} text-xs tracking-[0.12px] leading-[15.8px] text-center`}
         >
-          © 2025, All Rights Reserved
+          © 2026, All Rights Reserved
         </div>
       </div>
     </footer>
